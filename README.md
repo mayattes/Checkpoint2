@@ -119,3 +119,4 @@ Pas de paquet 5
 ARP
 
 #### Q.3.15 Quels ont été les rôles des matériels A et B dans cette communication ?
+PING des machines
