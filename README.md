@@ -31,4 +31,6 @@ On doit avoir la copie d'écran d'un ping fonctionnel.
 #### Si oui fais les manipulations nécessaires.
 #### Explique ce que tu as fait et montre par une copie d'écran le résultat de la commande ipconfig /all sur le client.
 Le serveur DHCP distribut dynamique les IP machine du réseau
+![image](https://github.com/user-attachments/assets/54c47b16-15b2-4555-9627-35e1b805a16c)
+
 ![image](https://github.com/user-attachments/assets/526cbced-cdb0-45b7-8de6-fa6e389ae9c4)
