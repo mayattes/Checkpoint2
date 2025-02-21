@@ -101,4 +101,21 @@ Toutes
 elles ne pourront plus communique entre elles
 
 #### Q.3.10 On souhaite mettre la configuration IP des ordinateurs en dynamique. Quelles sont les modifications possible ?
-Il faufrait ajoutéun server dhcp, ou configurer un router en dhcp
+Il faufrait ajouter un server dhcp, ou configurer un router en dhcp
+
+### d. Analyse de trames
+#### Fichier 1 :
+
+#### Q.3.11 Sur le paquet N°5, quelle est l'adresse mac du matériel qui initialise la communication ? Déduis-en le nom du matériel.
+Pas de paquet 5
+![image](https://github.com/user-attachments/assets/5660d9b9-0a72-49a6-897e-a11dc7ae5fa8)
+
+
+#### Q.3.12 Est-ce que la communication enregistrée dans cette capture a réussi ? Si oui, indique entre quels matériel, si non indique pourquoi cela n'a pas fonctionné.
+
+#### Q.3.13 Dans cette capture, à quel matériel correspond le request et le reply ? Donne le nom, l'adresse IP, et l'adresse mac de chaque materiel.
+
+#### Q.3.14 Dans le paquet N°2, quel est le protocole encapsulé ? Quel est son rôle ?
+ARP
+
+#### Q.3.15 Quels ont été les rôles des matériels A et B dans cette communication ?
