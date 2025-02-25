@@ -59,7 +59,7 @@ Le serveur DHCP distribut dynamique les IP machine du réseau
 
 ### Exercice 3
 
-###c. Etude théorique
+### c. Etude théorique
 
 #### Q.3.1 Quel est le matériel réseau A ?
 Le maytériel du réseau A est un switch
@@ -87,9 +87,9 @@ PC1 et PC5: 10.10.4.0
 PC5: 10.11.80.0
 
 ##### La première adresse disponible
-10.10.4.1
-La dernière adresse disponible
-L'adresse de diffusion
+La première addresse disponible: 10.10.4.1
+La dernière adresse disponible: 10.10.4.2
+L'adresse de diffusion 10.10.255.254
 
 #### Q.3.7 En t'aidant des informations que tu as fourni à la question 3.6, et à l'aide de tes connaissances, indique parmi tous les ordinateurs du schéma, lesquels vont pouvoir communiquer entre-eux.
 Toutes
@@ -116,7 +116,7 @@ Pas de paquet 5
 #### Q.3.13 Dans cette capture, à quel matériel correspond le request et le reply ? Donne le nom, l'adresse IP, et l'adresse mac de chaque materiel.
 
 #### Q.3.14 Dans le paquet N°2, quel est le protocole encapsulé ? Quel est son rôle ?
-ARP
+ARP, il permet la résolution de l'adresse  mac dela machine
 
 #### Q.3.15 Quels ont été les rôles des matériels A et B dans cette communication ?
 PING des machines
