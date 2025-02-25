@@ -37,7 +37,13 @@ Le serveur DHCP distribut dynamique les IP machine du réseau
 
 ## Exercice 2
 
+#### Q.2.1 Lorsque l'on exécute le script il y a une erreur et le script AddLocalUsers.ps1 ne s’exécute pas.
+Add-LocalGroupMember -Group "Users" -Member "$Prenom.$Nom"
+        
 #### Q.2.2 Le premier utilisateur du fichier Users.csv n'est jamais pris en compte. Modifie le script pour que cela soit le cas.
+
+$Users = Import-Csv -Path $CsvFile -Delimiter ";" -Header "prenom","nom","societe","fonction","service","description","mail","mobile","scriptPath","telephoneNumber" -Encoding UTF8  | Select-Object -Skip 1
+
 
 #### Q.2.3 Le champs Descriptionest importé du fichier mais non-utilisé. Modifie le code pour que ce champs soit utilisé dans la création des utilisateurs.
 
@@ -56,6 +62,16 @@ Le serveur DHCP distribut dynamique les IP machine du réseau
 #### Q.2.10 Les comptes utilisateurs créer ont un mot de passe qui expire. Corrige cela pour qu'il n'expire pas.
 
 #### Q.2.11 Modifie le code pour que le mot de passe soit constitué de 10 caractères au lieu de 6.
+Function Random-Password ($length = 10)
+{
+    $punc = 46..46
+    $digits = 48..57
+    $letters = 65..90 + 97..122
+
+    $password = get-random -count $length -input ($punc + $digits + $letters) |`
+        ForEach -begin { $aa = $null } -process {$aa += [char]$_} -end {$aa}
+    Return $password.ToString()
+}
 
 ### Exercice 3
 
@@ -98,7 +114,7 @@ Toutes
 Toutes
 
 #### Q.3.9 Quel incidence y-a-t'il pour les ordinateurs PC2 et PC3 si on interverti leur ports de connexion sur le matériel A ?
-elles ne pourront plus communique entre elles
+elles ne pourront plus communiquer entre elles
 
 #### Q.3.10 On souhaite mettre la configuration IP des ordinateurs en dynamique. Quelles sont les modifications possible ?
 Il faufrait ajouter un server dhcp, ou configurer un router en dhcp
