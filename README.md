@@ -50,6 +50,7 @@ $Users = Import-Csv -Path $CsvFile -Delimiter ";" -Header "prenom","nom","societ
 #### Q.2.4 Dans l'importation des utilisateurs du fichier CSV, tous les champs sont pris. Or il n'y en a qu'une partie qui est utilisé par la suite. Corrige pour qu'il n'y ait que les champs utilisés pour la création des utilisateurs qui soient importés du fichier CSV.
 
 #### Q.2.5 Le mot de passe crée n'est pas affiché, donc on ne le connait pas. Affiche le avec le message indiquant qu'un compte est crée.
+Write-Host "L'utilisateur $Prenom.$Nom a été crée avec le mot de passe: $Pass"
 
 #### Q.2.6 Une fonction de création de log, nommée Log existe. Utilise là pour journaliser l'activité du script et les actions importantes du script.
 
@@ -60,6 +61,18 @@ $Users = Import-Csv -Path $CsvFile -Delimiter ";" -Header "prenom","nom","societ
 #### Q.2.9 Plusieurs fois dans le code du scrip, la chaine "$Prenom.$Nom" est utilisée. Remplace cette chaîne par une variable $Name que tu initialise correctement.
 
 #### Q.2.10 Les comptes utilisateurs créer ont un mot de passe qui expire. Corrige cela pour qu'il n'expire pas.
+$Name = "$Prenom.$Nom"
+    If (-not(Get-LocalUser -Name "$Prenom.$Nom" -ErrorAction SilentlyContinue))
+    {
+        $Pass = Random-Password
+        $Password = (ConvertTo-secureString $Pass -AsPlainText -Force)
+        $Description = "$($user.description) - $($User.fonction)"
+        $UserInfo = @{
+            Name                 = "$Prenom.$Nom"
+            FullName             = "$Prenom.$Nom"
+            Password             = $Password
+            AccountNeverExpires  = $true
+            PasswordNeverExpires = $true
 
 #### Q.2.11 Modifie le code pour que le mot de passe soit constitué de 10 caractères au lieu de 6.
 Function Random-Password ($length = 10)
