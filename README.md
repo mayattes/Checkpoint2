@@ -124,13 +124,28 @@ PING des machines
 ### Fichier 2 :
 
 #### Q.3.16 Dans cette trame, qui initialise la communication ? Donne l'adresse IP ainsi que le nom du matériel.
-ICMP
+C'est le routeur B interface G0/1
+IP: 10.12.2.254
 
 #### Q.3.17 Quel est le protocole encapsulé ? Quel est son rôle ?
+C'est le protocol ICMP, un ping du RB vers R2
 
 #### Q.3.18 Est-ce que cette communication a réussi ? Si oui, indique entre quels matériel, si non indique pourquoi cela n'a pas fonctionné.
-Oui, entre les router R et R
+Oui, entre les router B et R2
 ### Q.3.19 Explique la ligne du paquet N° 2
-C'est un réponse à l'IP 10.12.2.254
+C'est un réponse à l'IP 10.12.2.254 vers l'IP 172.16.5.253
 
 #### Q.3.20 Quels ont été les rôles des matériels A et B ?
+Ils ont permit le routage vers le routeur 2
+
+### Fichier 3 :
+
+#### Q.3.21 Dans cette trame, donne les noms et les adresses IP des matériels sources et destination.
+Ip Source: 10.11.80.2
+IP destination: 10.11.80.200
+#### Q.3.22 Quelles sont les adresses mac source et destination ? Qu'en déduis-tu ?
+Mac address source: 00:50:79:66:68:01 (c'est une IP privée) du PC2
+Mac address destination: ff:ff:ff:ff:ff:ff (c'est un broadcast)
+
+#### Q.3.23 A quel emplacement du réseau a été enregistré cette communication ?
+C'est une demande ARP pour le PC
